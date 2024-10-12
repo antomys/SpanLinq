@@ -20,11 +20,8 @@ jobs:
         with:
           dotnet-version: 8.x.x
       - name: Restore dependencies
-        working-directory: ./
-        run: dotnet restore
+        run: dotnet restore ./SpanLinq.sln
       - name: Build
-        working-directory: ./
-        run: dotnet build --no-restore
+        run: dotnet build SpanLinq/SpanLinq.csproj- --configuration Release --no-restore
       - name: Test
-        working-directory: ./
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test ./SpanLinq.sln --configuration Release --no-restore
