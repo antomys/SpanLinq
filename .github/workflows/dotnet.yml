@@ -14,22 +14,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/setup-dotnet@v4
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x.x
       - name: Restore dependencies
-        run: |
-          ls -a
-          cd SpanLinq
-          dotnet restore
+        run: dotnet restore
       - name: Build
-        run: |
-          ls -a
-          cd SpanLinq
-          dotnet build --no-restore
+        run: dotnet build --no-restore
       - name: Test
-        run: |
-          cs ./SpanLinq.Tests
-          dotnet test --no-build --verbosity normal
+        run: dotnet test --no-build --verbosity normal
