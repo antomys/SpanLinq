@@ -1,13 +1,31 @@
-```
+## Performance benchmarks
 
+This document provides an overview of performance benchmarks for various operations. The benchmarks compare different implementations to help you understand the performance characteristics of each approach.
+In the following benchmarks:
+
+- Span*** refers to SpanLinq.SpanEnumerable.***
+  System*** refers to System.Linq.Enumerable.***
+  Handcrafted*** refers to optimized code that uses Span<T> directly.
+
+These comparisons will help you evaluate the performance differences between standard LINQ operations, SpanLinq implementations, and hand-optimized code using Span<T>.
+
+## System settings
+
+System settings provide crucial information about the environment in which benchmarks or tests are run. These details are essential for understanding the context of performance measurements and ensuring reproducibility of results.
+In this case, the system settings are as follows:
+
+```
 BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3880/23H2/2023Update/SunValley3)
 12th Gen Intel Core i7-12700F, 1 CPU, 20 logical and 12 physical cores
 .NET SDK 9.0.100-preview.6.24328.19
   [Host]     : .NET 9.0.0 (9.0.24.32707), X64 RyuJIT AVX2
   DefaultJob : .NET 9.0.0 (9.0.24.32707), X64 RyuJIT AVX2
-
-
 ```
+
+When reviewing benchmarks or performance data, always consider these system settings to make informed decisions about your software's performance characteristics.
+
+## Results
+
 | Type                          | Method                         | Mean              | Error          | StdDev         | Gen0   | Gen1   | Allocated |
 |------------------------------ |------------------------------- |------------------:|---------------:|---------------:|-------:|-------:|----------:|
 | ChunkBench                    | HandcraftedChunk               |       986.5243 ns |     15.5550 ns |     15.2770 ns | 0.5684 | 0.0019 |    7440 B |

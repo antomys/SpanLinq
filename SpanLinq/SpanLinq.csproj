@@ -12,7 +12,7 @@
     <Description>Lightweight, Zero Allocation LINQ Implementation on `Span&lt;T&gt;`</Description>
     <Copyright>Copyright (c) Andante 2024</Copyright>
     <PackageProjectUrl>https://github.com/andanteyk/SpanLinq</PackageProjectUrl>
-    <PackageIcon>SpanLinq.png</PackageIcon>
+    <PackageIcon>assets/SpanLinq.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/andanteyk/SpanLinq</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

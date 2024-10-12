@@ -6,7 +6,7 @@ Lightweight, Zero Allocation LINQ Implementation on `Span<T>`
 <a href="LICENSE">![GitHub License](https://img.shields.io/github/license/andanteyk/SpanLinq)</a>
 <a href="https://www.nuget.org/packages/AndanteSoft.SpanLinq">![NuGet Downloads](https://img.shields.io/nuget/dt/AndanteSoft.SpanLinq)</a>
 
-![Logo](https://raw.githubusercontent.com/andanteyk/SpanLinq/main/SpanLinq.png)
+![Logo](assets/SpanLinq.png)
 
 ## Usage
 
