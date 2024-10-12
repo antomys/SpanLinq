@@ -25,7 +25,8 @@ jobs:
           dotnet restore
       - name: Build
         run: |
-          cd ./SpanLinq
+          ls -a
+          cd SpanLinq
           dotnet build --no-restore
       - name: Test
         run: |
