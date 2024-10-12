@@ -19,9 +19,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x.x
-      - name: ls
-        run: ls
+      - name: Restore dependencies
+        working-directory: ./
+        run: dotnet restore
       - name: Build
-        run: dotnet build -c Release
+        working-directory: ./
+        run: dotnet build --no-restore
       - name: Test
+        working-directory: ./
         run: dotnet test --no-build --verbosity normal
